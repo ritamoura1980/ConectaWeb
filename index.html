@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja demonstrativa de smartphones e planos móveis.">
+  <title>Conecta | Smartphones e planos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">Frete grátis para todo o Brasil em compras acima de R$ 999</div>
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio" aria-label="Conecta - início">conecta<span>.</span></a>
+      <div class="nav-links">
+        <a href="#aparelhos">Celulares</a>
+        <a href="#planos">Planos</a>
+        <a href="#beneficios">Benefícios</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button" id="searchToggle" type="button" aria-label="Abrir busca" title="Buscar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        </button>
+        <button class="cart-button" id="cartButton" type="button" aria-label="Carrinho com 0 itens">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 3h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20 7H7"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span id="cartCount">0</span>
+        </button>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="search-panel" id="searchPanel">
+      <div class="container search-inner">
+        <input id="searchInput" type="search" placeholder="Qual celular você procura?" aria-label="Buscar celular">
+        <button id="searchClose" type="button" aria-label="Fechar busca">&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1800&q=88" alt="Smartphone moderno sobre uma superfície colorida">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Semana do smartphone</p>
+        <h1>Seu próximo celular está aqui.</h1>
+        <p>Os lançamentos que você quer, com até 12x sem juros e plano sob medida.</p>
+        <a class="primary-button" href="#aparelhos">Ver ofertas</a>
+      </div>
+    </section>
+
+    <section class="quick-benefits" id="beneficios" aria-label="Benefícios da loja">
+      <div class="container benefit-grid">
+        <article><strong>12x sem juros</strong><span>no cartão de crédito</span></article>
+        <article><strong>Entrega rápida</strong><span>acompanhe pelo celular</span></article>
+        <article><strong>Compra segura</strong><span>seus dados protegidos</span></article>
+        <article><strong>Suporte humano</strong><span>quando você precisar</span></article>
+      </div>
+    </section>
+
+    <section class="products-section container" id="aparelhos">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Escolha o seu</p>
+          <h2>Smartphones em destaque</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar por marca">
+          <button class="filter active" type="button" data-filter="all">Todos</button>
+          <button class="filter" type="button" data-filter="apple">Apple</button>
+          <button class="filter" type="button" data-filter="samsung">Samsung</button>
+          <button class="filter" type="button" data-filter="motorola">Motorola</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-brand="apple" data-name="iphone 15">
+          <span class="tag">Mais vendido</span>
+          <div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=700&q=85" alt="Apple iPhone 15"></div>
+          <div class="product-info">
+            <p class="brand">Apple</p><h3>iPhone 15</h3><p class="storage">128 GB · 5G</p>
+            <p class="old-price">De R$ 5.499,00</p><p class="price">R$ 4.299,00</p><p class="installment">ou 12x de R$ 358,25</p>
+            <button class="buy-button" type="button" data-product="iPhone 15">Adicionar ao carrinho</button>
+          </div>
+        </article>
+        <article class="product-card" data-brand="samsung" data-name="galaxy s24">
+          <span class="tag">Oferta</span>
+          <div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=700&q=85" alt="Samsung Galaxy S24"></div>
+          <div class="product-info">
+            <p class="brand">Samsung</p><h3>Galaxy S24</h3><p class="storage">256 GB · 5G</p>
+            <p class="old-price">De R$ 4.499,00</p><p class="price">R$ 3.399,00</p><p class="installment">ou 12x de R$ 283,25</p>
+            <button class="buy-button" type="button" data-product="Galaxy S24">Adicionar ao carrinho</button>
+          </div>
+        </article>
+        <article class="product-card" data-brand="motorola" data-name="motorola edge 50">
+          <span class="tag new">Novidade</span>
+          <div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=700&q=85" alt="Motorola Edge 50"></div>
+          <div class="product-info">
+            <p class="brand">Motorola</p><h3>Edge 50</h3><p class="storage">256 GB · 5G</p>
+            <p class="old-price">De R$ 3.199,00</p><p class="price">R$ 2.499,00</p><p class="installment">ou 12x de R$ 208,25</p>
+            <button class="buy-button" type="button" data-product="Motorola Edge 50">Adicionar ao carrinho</button>
+          </div>
+        </article>
+        <article class="product-card" data-brand="samsung" data-name="galaxy a55">
+          <span class="tag">Bom negócio</span>
+          <div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=700&q=85" alt="Samsung Galaxy A55"></div>
+          <div class="product-info">
+            <p class="brand">Samsung</p><h3>Galaxy A55</h3><p class="storage">128 GB · 5G</p>
+            <p class="old-price">De R$ 2.499,00</p><p class="price">R$ 1.899,00</p><p class="installment">ou 12x de R$ 158,25</p>
+            <button class="buy-button" type="button" data-product="Galaxy A55">Adicionar ao carrinho</button>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState">Nenhum aparelho encontrado.</p>
+    </section>
+
+    <section class="plan-banner" id="planos">
+      <div class="container plan-content">
+        <div><p class="eyebrow">Mais internet, menos limites</p><h2>Leve 40 GB e redes sociais à vontade.</h2><p>Plano digital por R$ 49,90/mês. Sem fidelidade e sem letras miúdas.</p></div>
+        <a class="secondary-button" href="#aparelhos">Montar meu combo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo light" href="#inicio">conecta<span>.</span></a>
+      <p>Uma loja demonstrativa para testes web. Nenhuma venda real é realizada.</p>
+      <p>&copy; 2026 Conecta.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
